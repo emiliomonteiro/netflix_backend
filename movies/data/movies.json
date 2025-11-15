@@ -1,0 +1,60 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Matrix",
+      "description": "Um programador descobre que a realidade é uma simulação e se junta a um grupo de rebeldes para lutar contra as máquinas.",
+      "genre": "Ficção Científica",
+      "release_year": 1999,
+      "duration_minutes": 136,
+      "rating": 8.7,
+      "thumbnail_url": "https://example.com/matrix-thumb.jpg",
+      "video_url": "https://example.com/matrix-video.mp4",
+      "is_featured": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    },
+    {
+      "id": 2,
+      "title": "O Poderoso Chefão",
+      "description": "A saga da família Corleone e sua ascensão no mundo do crime organizado.",
+      "genre": "Drama",
+      "release_year": 1972,
+      "duration_minutes": 175,
+      "rating": 9.2,
+      "thumbnail_url": "https://example.com/godfather-thumb.jpg",
+      "video_url": "https://example.com/godfather-video.mp4",
+      "is_featured": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    },
+    {
+      "id": 3,
+      "title": "Vingadores: Ultimato",
+      "description": "Os Vingadores se reúnem para uma batalha final contra Thanos.",
+      "genre": "Ação",
+      "release_year": 2019,
+      "duration_minutes": 181,
+      "rating": 8.4,
+      "thumbnail_url": "https://example.com/endgame-thumb.jpg",
+      "video_url": "https://example.com/endgame-video.mp4",
+      "is_featured": false,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    },
+    {
+      "id": 4,
+      "title": "Interestelar",
+      "description": "Uma equipe de exploradores viaja através de um buraco de minhoca no espaço em uma tentativa de garantir a sobrevivência da humanidade.",
+      "genre": "Ficção Científica",
+      "release_year": 2014,
+      "duration_minutes": 169,
+      "rating": 8.6,
+      "thumbnail_url": "https://example.com/interstellar-thumb.jpg",
+      "video_url": "https://example.com/interstellar-video.mp4",
+      "is_featured": true,
+      "created_at": "2025-11-15T09:22:32.356776",
+      "updated_at": "2025-11-15T09:22:32.356776"
+    }
+  ]
+}
