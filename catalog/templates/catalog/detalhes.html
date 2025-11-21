@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ filme.Title }}</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0d0d0d;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            gap: 40px;
+            padding: 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .poster {
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255,0,0,0.3);
+        }
+
+        .infos {
+            max-width: 600px;
+        }
+
+        .titulo {
+            font-size: 32px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .ano {
+            color: #bbb;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .campo {
+            margin-bottom: 12px;
+        }
+
+        .campo strong {
+            color: #e50914;
+        }
+
+        .plot {
+            margin-top: 20px;
+            line-height: 1.5;
+            color: #ddd;
+        }
+
+        .btn-voltar {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background: #e50914;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .btn-voltar:hover {
+            background: #b20710;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <img class="poster" src="{{ filme.Poster }}" alt="{{ filme.Title }}">
+
+        <div class="infos">
+            <div class="titulo">{{ filme.Title }}</div>
+            <div class="ano">{{ filme.Year }}</div>
+
+            <div class="campo"><strong>Diretor:</strong> {{ filme.Director }}</div>
+            <div class="campo"><strong>Gênero:</strong> {{ filme.Genre }}</div>
+            <div class="campo"><strong>Atores:</strong> {{ filme.Actors }}</div>
+            <div class="campo"><strong>Duração:</strong> {{ filme.Runtime }}</div>
+            <div class="campo"><strong>Avaliação IMDB:</strong> {{ filme.imdbRating }}</div>
+
+            <p class="plot">{{ filme.Plot }}</p>
+
+            <a href="/" class="btn-voltar">Voltar</a>
+        </div>
+    </div>
+
+</body>
+</html>
+

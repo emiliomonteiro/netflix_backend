@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0d0d0d;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: #1a1a1a;
+            padding: 40px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 26px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            background: #333;
+            border: 1px solid #555;
+            border-radius: 6px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #e50914;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background: #e50914;
+            border: none;
+            border-radius: 6px;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .btn-login:hover {
+            background: #b20710;
+        }
+
+        .extra-links {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .extra-links a {
+            color: #e50914;
+            text-decoration: none;
+        }
+
+        .extra-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Entrar</h2>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <!-- username -->
+            <label for="id_username">Usuário</label>
+            {{ form.username }}
+
+            <!-- password -->
+            <label for="id_password">Senha</label>
+            {{ form.password }}
+
+            <button type="submit" class="btn-login">Login</button>
+        </form>
+
+        <div class="extra-links">
+            <p><a href="/accounts/password_reset/">Esqueci minha senha</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
+

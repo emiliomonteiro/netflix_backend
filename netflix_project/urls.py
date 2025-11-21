@@ -16,8 +16,26 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
+    # API REST
     path('api/', include('movies.urls')),
+    
+    # Autenticação
+    path(
+        'accounts/login/',
+        auth_views.LoginView.as_view(template_name='catalog/login.html'),
+        name='login'
+    ),
+    path(
+        'logout/',
+        auth_views.LogoutView.as_view(next_page='/accounts/login/'),
+        name='logout'
+    ),
+    
+    # Catálogo web (deve vir por último para não conflitar com /api/)
+    path('', include('catalog.urls')),
 ]
